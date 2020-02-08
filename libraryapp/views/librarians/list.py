@@ -20,7 +20,8 @@ def list_librarians(request):
                 l.user_id,
                 u.first_name,
                 u.last_name,
-                u.email
+                u.email,
+                u.username
             from libraryapp_librarian l
             join auth_user u on l.user_id = u.id
             """)
