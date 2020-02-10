@@ -8,6 +8,11 @@
         <li>
             <a href="{% url 'libraryapp:library' library.id %}"> {{ library.title }} </a>
             is located at {{library.address}}
+            <ul>
+            {% for book in library.books %}
+                <li>{{ book.title }}
+            {% endfor %}
+            </ul>
         </li>
     {% endfor %}
     </ol>
